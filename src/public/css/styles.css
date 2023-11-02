@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+:root {
+  --amarillo: #eac926;
+  --azul: #03264c;
+  --celeste: #1259c3;
+  --grisOscuro: #666;
+  --grisClaro: #ebebeb;
+  --verde: #39b54a;
+
+  --roboto: "Roboto", sans-serif;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #fff159;
+  padding: 0 0 2rem 0;
+}
+
+body {
+  font-family: var(--roboto);
+}
+
+main {
+  width: 100%;
+  padding: 0 0 3rem 0;
+  background-color: #ebebeb;
+}
+
+li {
+  list-style: none;
+}
+
+footer {
+  text-align: center;
+}
+
+img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.banner {
+  width: 100%;
+  height: fit-content;
+  margin: 0;
+}
+
+.navLinksLogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 6rem;
+}
+
+.logo {
+  width: 16rem;
+  height: 13rem;
+  cursor: pointer;
+}
+
+.inputSearch {
+  width: 15rem;
+  height: 1.8rem;
+  border: none;
+  border: 0.5px solid #ebebeb;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.inputSearch::placeholder {
+  text-align: center;
+}
+
+.titulo {
+  font-size: 20px;
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 6rem;
+}
+
+.navLinks .ulLinks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+.sectionGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.gridCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  height: 23rem;
+  border: 1px solid #ebebeb;
+  margin: 10px;
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.border {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 1px solid green;
+}
+
+.infoBox {
+  border-top: 1px solid #ebebeb;
+  padding: 0.5rem;
+  width: 90%;
+  position: relative;
+}
+
+.infoBox .delivery-icon {
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #39b54a;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  top: -15px;
+}
+
+.flexPrecio {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  margin: 1rem 0 2rem 0;
+}
+
+.titulares {
+  font-size: 24px;
+  margin: 2rem 0 0 0;
+}
+
+.precios {
+  font-size: 18px;
+}
+
+.descuentos {
+  font-size: 16px;
+  color: #5eac35;
+}
+
+.tituloProducto {
+  font-size: 18px;
+}
+
+.precios,
+.descuentos,
+.tituloProducto {
+  font-weight: 500;
+}
+
+.menuHamburguesa {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .inputSearch {
+    width: 50%;
+    margin-top: 1rem; /* Agrega un margen superior para separar el input de búsqueda del título */
+  }
+
+  .navLinksLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 2rem;
+  }
+
+  .logo {
+    width: 5rem;
+    height: 3rem;
+  }
+
+  .titulo {
+    font-size: 15px;
+    margin-top: 1rem;
+  }
+
+  /* .menuHamburguesa {
+    display: block;
+    font-size: 24px;
+    margin-top: 1rem;
+  } */
+  .menuContainerHamburguesa {
+    background-color: #0044aa;
+    padding: 9px;
+    border-radius: 5px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .menuHamburguesa {
+    font-size: 24px;
+    color: white;
+    display: block;
+  }
+  .gridCards {
+    flex-direction: column;
+  }
+
+  ul li {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .inputSearch {
+    width: 10rem;
+  }
+
+  .navLinksLogo {
+    margin: 0 2rem;
+  }
+
+  .logo {
+    width: 12rem;
+    height: 13rem;
+  }
+
+  .titulo {
+    font-size: 15px;
+  }
+
+  .navLinks {
+    margin: 0 2rem;
+  }
+  .navLinks .ulLinks {
+    gap: 1rem;
+  }
+}
