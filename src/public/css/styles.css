@@ -36,12 +36,12 @@ li {
 
 footer {
   text-align: center;
-  padding: 1.5rem 0 ;
+  padding: 1.5rem 0;
   display: flex;
   flex-direction: column;
 }
 
-.footerInfo{
+.footerInfo {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -50,19 +50,19 @@ footer {
   margin: 0 1rem;
 }
 
-.footerInfo div{
+.footerInfo div {
   padding: 2rem;
 }
 
 .iconF {
   color: #1259c3;
-  transition: color 0.3s ease; 
+  transition: color 0.3s ease;
   cursor: pointer;
   margin-bottom: 1rem;
 }
 
 .iconF:hover {
-  color: rgb(166, 237, 239); 
+  color: rgb(166, 237, 239);
 }
 
 img {
@@ -70,7 +70,7 @@ img {
   height: 10rem;
 }
 
-a{
+a {
   text-decoration: none;
   color: black;
 }
@@ -96,16 +96,33 @@ a{
 }
 
 .inputSearch {
-  width: 15rem;
-  height: 1.8rem;
-  border: none;
-  border: 0.5px solid #ebebeb;
-  border-radius: 5px;
-  cursor: pointer;
+  position: relative;
 }
 
-.inputSearch::placeholder {
+.inputSearch input {
+  width: 20rem;
+  height: 2rem;
+  border: none;
   text-align: center;
+  border-radius: 10px;
+  margin: 0 1rem;
+  outline: none;
+}
+
+.inputSearch input::placeholder {
+  letter-spacing: 2px;
+}
+
+.inputSearch .lupa {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 3%;
+  width: 50px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .titulo {
@@ -150,7 +167,7 @@ a{
   display: flex;
   flex-direction: column;
   width: 15rem;
-  height: 23rem;
+  height: 21rem;
   border: 1px solid #ebebeb;
   margin: 10px;
   box-shadow: 0px 0px 5px rgb(100, 100, 100);
@@ -158,58 +175,22 @@ a{
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  transition: opacity 1s;
+  cursor: pointer;
 }
 
-.card:hover{
+.card:hover {
   box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-.card .info {
-  position: absolute;
-  bottom: -100%;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  backdrop-filter: blur(10px);
-  border-radius: 1em;
-  background-image: linear-gradient(to bottom, #fff);
-  transition: all 0.3s;
-  z-index: 1; 
+.card .tituloProducto {
+  display: none;
+  font-size: 18px;
 }
 
-.card:hover .info {
-  bottom: 0;
+.card:hover .tituloProducto {
+  display: block;
 }
-
-.card .info h5 {
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: #000;
-  text-align: center;
-  font-size: 30px;
-  opacity: 1;
-  transform: translateY(10px);
-  transition: all 0.5s;
-  position: relative;
-  z-index: 2; 
-}
-
-.card .info h5 {
-  opacity: 0;
-}
-
-.card:hover .info h5 {
-  opacity: 1;
-}
-
-.card .info i {
-  position: relative;
-  z-index: 3; 
-}
-
 
 .border {
   width: 5rem;
@@ -225,7 +206,6 @@ a{
   position: relative;
 }
 
-
 .infoBox .delivery-icon {
   display: block;
   font-size: 16px;
@@ -239,7 +219,6 @@ a{
   right: 20px;
   top: -15px;
   transition: transform 0.3s ease;
-
 }
 
 .delivery-icon:hover {
@@ -268,14 +247,6 @@ a{
   color: #5eac35;
 }
 
-/* .tituloProducto {
-  font-size: 18px;
-} */
-
-/* .tituloProducto {
-  margin-top: 10px;
-} */
-
 .precios,
 .descuentos,
 .tituloProducto {
@@ -286,13 +257,13 @@ a{
   display: none;
 }
 
-.formMain{
+.formMain {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.formCuenta{
+.formCuenta {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -307,7 +278,7 @@ a{
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
 }
 
-.formLogin{
+.formLogin {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -322,7 +293,7 @@ a{
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
 }
 
-.columns3{
+.columns3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
@@ -331,7 +302,7 @@ a{
   margin: 0 2rem;
 }
 
-.columns{
+.columns {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -339,14 +310,15 @@ a{
   justify-content: start;
 }
 
-.formCuenta label, .formLogin label{
+.formCuenta label,
+.formLogin label {
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 2px;
-
 }
 
-.formCuenta .inputText, .formLogin .inputText{
+.formCuenta .inputText,
+.formLogin .inputText {
   border: none;
   border-radius: 5px;
   width: 13rem;
@@ -356,31 +328,32 @@ a{
   padding: 10px 15px;
 }
 
-.formCuenta input, .formLogin input{
+.formCuenta input,
+.formLogin input {
   cursor: pointer;
 }
 
-.formCuenta .inputCheck{
+.formCuenta .inputCheck {
   border: none;
   background: none;
   width: 1.5em;
   height: 1.5rem;
 }
 
-.flexRadio{
+.flexRadio {
   display: flex;
   flex-direction: row;
   gap: 1rem;
 }
 
-.flexCategorias{
+.flexCategorias {
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
 }
 
-.flexRadio button{
+.flexRadio button {
   border: none;
   background: none;
   cursor: pointer;
@@ -391,20 +364,22 @@ a{
   color: white;
   margin-top: 2rem;
   letter-spacing: 1px;
-
 }
 
-.flexRadio button:hover{
+.flexRadio button:hover {
   /* background-color: rgb(193, 219, 221); */
-  background-color: #0022AA;
+  background-color: #0022aa;
   color: white;
 }
 
-
 @media (max-width: 767px) {
-  .inputSearch {
-    width: 50%;
-    margin-top: 1rem; 
+  inputSearch input {
+    width: 80%; /* El ancho ocupará el 100% del contenedor */
+    margin: 0; /* Eliminamos el margen lateral */
+  }
+
+  .inputSearch .lupa {
+    right: 5%; /* Ajustamos la posición de la lupa para dispositivos móviles */
   }
 
   .navLinksLogo {
@@ -448,13 +423,14 @@ a{
     display: none;
   }
 
-  footer div{
+  footer div {
     margin: 20px 25px;
   }
-  .formCuenta, .formLogin{
+  .formCuenta,
+  .formLogin {
     width: 90%;
   }
-  .columns3{
+  .columns3 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -462,7 +438,7 @@ a{
     gap: 2rem;
   }
 
-  .footerInfo{
+  .footerInfo {
     flex-direction: column;
   }
 }
@@ -492,11 +468,12 @@ a{
     gap: 1rem;
   }
 
-  .formCuenta, .formLogin{
+  .formCuenta,
+  .formLogin {
     width: 90%;
   }
 
-  .columns3{
+  .columns3 {
     display: flex;
     flex-direction: column;
     align-items: center;
