@@ -11,7 +11,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Mercado Liebre</title>
+    <title>Mercadoliebre</title>
   </head>
   <body>
     <header>
@@ -23,13 +23,19 @@
           type="text"
           placeholder="Buscar productos, marcas"
           class="inputSearch"
+          value=""
         />
         <h4 class="titulo">
           <i class="fa-solid fa-hand-holding-dollar"></i> Comprá en cuotas y sin
           tarjeta de crédito
         </h4>
         <div class="menuContainerHamburguesa">
-          <i class="fa-solid fa-bars menuHamburguesa" style="color: #ffffff;"></i>        </div>      </div>
+          <i
+            class="fa-solid fa-bars menuHamburguesa"
+            style="color: #ffffff"
+          ></i>
+        </div>
+      </div>
       <div class="navLinks">
         <ul class="ulLinks">
           <li>Ofertas</li>
@@ -38,8 +44,14 @@
           <li>Ayuda</li>
         </ul>
         <ul class="ulLinks">
-          <li>Creá tu cuenta <i class="fa-solid fa-right-to-bracket"></i></li>
-          <li>Ingresá <i class="fa-regular fa-id-card"></i></li>
+          <li>
+            <a href="/register"
+              >Creá tu cuenta <i class="fa-solid fa-right-to-bracket"></i
+            ></a>
+          </li>
+          <li>
+            <a href="/login">Ingresá <i class="fa-regular fa-id-card"></i></a>
+          </li>
           <li>Mis compras <i class="fa-solid fa-cart-shopping"></i></li>
         </ul>
       </div>
@@ -51,6 +63,9 @@
         <div class="gridCards">
           <article class="card">
             <img src="/img/img-cafetera-moulinex.jpg" alt="cafetera" />
+            <div class="info">
+              <h5>Cafetera Moulinex</h5>
+            </div>
             <div class="infoBox">
               <i
                 class="fa-solid fa-truck delivery-icon"
@@ -60,12 +75,14 @@
                 <h5 class="precios">$6.770</h5>
                 <h5 class="descuentos">40% OFF</h5>
               </div>
-              <h5 class="tituloProducto">Cafetera Moulinex</h5>
             </div>
           </article>
 
           <article class="card">
             <img src="/img/img-macbook-pro-2019.jpg" alt="mcbook" />
+            <div class="info">
+              <h5 class="tituloProducto">MacBook Pro 2019</h5>
+            </div>
             <div class="infoBox">
               <i
                 class="fa-solid fa-truck delivery-icon"
@@ -75,12 +92,14 @@
                 <h5 class="precios">$230.000</h5>
                 <h5 class="descuentos">20% OFF</h5>
               </div>
-              <h5 class="tituloProducto">MacBook Pro 2019</h5>
             </div>
           </article>
 
           <article class="card">
             <img src="/img/img-samsung-galaxy-s10.jpg" alt="samsung" />
+            <div class="info">
+              <h5 class="tituloProducto">Samsung Galaxy s10</h5>
+            </div>
             <div class="infoBox">
               <i
                 class="fa-solid fa-truck delivery-icon"
@@ -90,12 +109,14 @@
                 <h5 class="precios">$23.200</h5>
                 <h5 class="descuentos">5% off</h5>
               </div>
-              <h5 class="tituloProducto">SmartTv Samsung 43"</h5>
             </div>
           </article>
 
           <article class="card">
             <img src="/img/img-tv-samsung-smart.jpg" alt="tv" />
+            <div class="info">
+              <h5 class="tituloProducto">SmartTv Samsung 43"</h5>
+            </div>
             <div class="infoBox">
               <i
                 class="fa-solid fa-truck delivery-icon"
@@ -105,7 +126,6 @@
                 <h5 class="precios">$6.770</h5>
                 <h5 class="descuentos">40% OFF</h5>
               </div>
-              <h5 class="tituloProducto">Cafetera Moulinex</h5>
             </div>
           </article>
         </div>
@@ -115,6 +135,9 @@
         <div class="gridCards">
           <article class="card">
             <img src="/img/img-cafetera-moulinex.jpg" alt="cafetera" />
+            <div class="info">
+              <h5 class="tituloProducto">Cafetera Moulinex</h5>
+            </div>
             <div class="infoBox">
               <i
                 class="fa-solid fa-truck delivery-icon"
@@ -124,11 +147,13 @@
                 <h5 class="precios">$6.770</h5>
                 <h5 class="descuentos">40% OFF</h5>
               </div>
-              <h5 class="tituloProducto">Cafetera Moulinex</h5>
             </div>
           </article>
           <article class="card">
             <img src="/img/img-macbook-pro-2019.jpg" alt="mcbook" />
+            <div class="info">
+              <h5 class="tituloProducto">MacBook Pro 2019</h5>
+            </div>
             <div class="infoBox">
               <i
                 class="fa-solid fa-truck delivery-icon"
@@ -138,11 +163,13 @@
                 <h5 class="precios">$230.000</h5>
                 <h5 class="descuentos">20% OFF</h5>
               </div>
-              <h5 class="tituloProducto">MacBook Pro 2019</h5>
             </div>
           </article>
           <article class="card">
             <img src="/img/img-samsung-galaxy-s10.jpg" alt="samsung" />
+            <div class="info">
+              <h5 class="tituloProducto">Samsung Galaxy s10</h5>
+            </div>
             <div class="infoBox">
               <i
                 class="fa-solid fa-truck delivery-icon"
@@ -152,11 +179,13 @@
                 <h5 class="precios">$23.200</h5>
                 <h5 class="descuentos">5% off</h5>
               </div>
-              <h5 class="tituloProducto">SmartTv Samsung 43"</h5>
             </div>
           </article>
           <article class="card">
             <img src="/img/img-tv-samsung-smart.jpg" alt="tv" />
+            <div class="info">
+              <h5 class="tituloProducto">SmartTv Samsung 43"</h5>
+            </div>
             <div class="infoBox">
               <i
                 class="fa-solid fa-truck delivery-icon"
@@ -166,33 +195,37 @@
                 <h5 class="precios">$6.770</h5>
                 <h5 class="descuentos">40% OFF</h5>
               </div>
-              <h5 class="tituloProducto">Cafetera Moulinex</h5>
             </div>
           </article>
         </div>
       </section>
     </main>
-    <footer>
-      <div>
-        <h4>Pagá con tarjeta o en efectivo</h4>
-        <p>
-          Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o
-          efectivo en puntos de pago. ¡Y siempre es seguro!
-        </p>
-      </div>
-      <div>
-        <h4>Envío gratis desde $ 2.500</h4>
-        <p>
-          Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en
-          miles de productos. Es un beneficio de Mercado Puntos.
-        </p>
-      </div>
-      <div>
-        <h4>Seguridad, de principio a fin</h4>
-        <p>
-          ¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas
-          hacer, porque estás siempre protegid@.
-        </p>
+    <footer >
+      <div class="footerInfo">
+        <div>
+          <i class="fa-solid fa-credit-card fa-lg iconF" ></i>
+          <h4>Pagá con tarjeta o en efectivo</h4>
+          <p>
+            Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o
+            efectivo en puntos de pago. ¡Y siempre es seguro!
+          </p>
+        </div>
+        <div>
+          <i class="fa-solid fa-gift fa-lg iconF"></i>
+          <h4>Envío gratis desde $ 2.500</h4>
+          <p>
+            Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en
+            miles de productos. Es un beneficio de Mercado Puntos.
+          </p>
+        </div>
+        <div>
+          <i class="fa-solid fa-user-shield fa-lg iconF"></i>
+          <h4>Seguridad, de principio a fin</h4>
+          <p>
+            ¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no
+            puedas hacer, porque estás siempre protegid@.
+          </p>
+        </div>
       </div>
       <div>
         <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
